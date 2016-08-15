@@ -3,8 +3,6 @@ os: linux
 files:
   - source: codedeploy/config/ruby-codedeploy-demo-nginx
     destination: /etc/nginx/conf.d
-permissions:
-  permissions-specifications
 hooks:
   BeforeInstall:
     - location: codedeploy/configure_nginx.sh
