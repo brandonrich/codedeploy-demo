@@ -8,5 +8,5 @@ permissions:
 hooks:
   BeforeInstall:
     - location: codedeploy/configure_nginx.sh
-  AfterInstall
+  AfterInstall:
     - location: codedeploy/start_nginx.sh
