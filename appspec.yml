@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: codedeploy/config/ruby-codedeploy-demo-nginx
+  - source: codedeploy/config/ruby-codedeploy-demo-nginx.conf
     destination: /etc/nginx/conf.d
   - source: codedeploy/config/nginx.conf
     destination: /etc/nginx
