@@ -1,5 +1,5 @@
 on: 0.0
-os: linux 
+os: linux
 files:
   - source: codedeploy/config/ruby-codedeploy-demo-nginx
     destination: /etc/nginx/conf.d
