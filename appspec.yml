@@ -7,6 +7,9 @@ files:
     destination: /etc/nginx
 hooks:
   BeforeInstall:
+    - location: codedeploy/scripts/stop_unicorn.sh
     - location: codedeploy/scripts/configure_nginx.sh
+    - location: codedeploy/scripts/install_dependencies.sh
   AfterInstall:
+    - location: codedeploy/scripts/start_unicorn.sh
     - location: codedeploy/scripts/start_nginx.sh
