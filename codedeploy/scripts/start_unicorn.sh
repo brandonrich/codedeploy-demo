@@ -1,7 +1,7 @@
 #export HOME=/home/ec2-user
 #export PATH=$PATH:$HOME/.local/bin:$HOME/bin
-bin/bash -c 'source /home/ec2-user/.bash_profile'
-bin/bash -c 'source /home/ec2-user/.bashrc'
+. /home/ec2-user/.bash_profile
+. /home/ec2-user/.bashrc
 #source /home/ec2-user/.bash_profile
 #source /home/ec2-user/.bashrc
 cd /opt/current-deployment
