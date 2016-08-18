@@ -12,4 +12,5 @@ hooks:
     - location: codedeploy/scripts/install_dependencies.sh
   AfterInstall:
     - location: codedeploy/scripts/start_unicorn.sh
+      runas: ec2-user
     - location: codedeploy/scripts/start_nginx.sh
