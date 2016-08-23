@@ -6,12 +6,6 @@ files:
   - source: codedeploy/config/nginx.conf
     destination: /etc/nginx
 permissions:
-  - object: /opt/current-deployment
-    pattern: "*"
-    owner: ec2-user 
-    group: ec2-user 
-    type:
-      - file
 hooks:
   BeforeInstall:
     - location: codedeploy/scripts/stop_unicorn.sh
@@ -19,5 +13,6 @@ hooks:
     - location: codedeploy/scripts/install_dependencies.sh
   AfterInstall:
     - location: codedeploy/scripts/start_unicorn.sh
-      runas: ec2-user
+      runas: root 
     - location: codedeploy/scripts/start_nginx.sh
+      runas: root 
