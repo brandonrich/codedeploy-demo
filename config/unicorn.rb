@@ -9,15 +9,12 @@
 # documentation.
 
 # Note: If you change this file in a Merge Request, please also create a
-# Merge Request on https://gitlab.com/gitlab-org/omnibus-gitlab/merge_requests
 
 # Relative URL support
 # WARNING: We recommend using an FQDN to host GitLab in a root path instead
 # of using a relative URL.
-# Documentation: http://doc.gitlab.com/ce/install/relative_url.html
 # Uncomment and customize the following line to run in a non-root path
 #
-# ENV['RAILS_RELATIVE_URL_ROOT'] = "/gitlab"
 
 # Read about unicorn workers here:
 # http://doc.gitlab.com/ee/install/requirements.html#unicorn-workers
@@ -33,7 +30,7 @@ worker_processes 3
 
 # Help ensure your application will always spawn in the symlinked
 # "current" directory that Capistrano sets up.
-working_directory "/home/git/gitlab" # available in 0.94.0+
+working_directory "/opt/current-deployment" # available in 0.94.0+
 
 # Listen on both a Unix domain socket and a TCP port.
 # If you are load-balancing multiple Unicorn masters, lower the backlog
@@ -48,7 +45,6 @@ listen "3000", :tcp_nopush => true
 # you will have to increase this value too.
 #
 # Example of output if you try to push 1GB repo to GitLab over http.
-#   -> git push http://gitlab.... master
 #
 #   error: RPC failed; result=18, HTTP code = 200
 #   fatal: The remote end hung up unexpectedly
@@ -59,7 +55,7 @@ listen "3000", :tcp_nopush => true
 timeout 60
 
 # feel free to point this anywhere accessible on the filesystem
-pid "/opt/current_deployment/pids/unicorn.pid"
+pid "/tmp/unicorn.pid"
 
 # By default, the Unicorn logger will write to stderr.
 # Additionally, some applications/frameworks log to stderr or stdout,
