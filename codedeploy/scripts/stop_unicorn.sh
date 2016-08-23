@@ -1,0 +1,1 @@
+unlink /opt/current-deployment
