@@ -1,1 +1,1 @@
-bundle exec rake db:migrate
+cd /opt/current-deployment && bundle exec rake db:migrate
