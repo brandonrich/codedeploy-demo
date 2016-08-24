@@ -13,7 +13,6 @@ hooks:
     - location: codedeploy/scripts/configure_nginx.sh
     - location: codedeploy/scripts/install_dependencies.sh
   AfterInstall:
-    - location: codedeploy/scripts/rake_tasks.sh
     - location: codedeploy/scripts/start_unicorn.sh
       runas: root 
     - location: codedeploy/scripts/start_nginx.sh
