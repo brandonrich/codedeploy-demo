@@ -9,6 +9,7 @@ permissions:
 hooks:
   BeforeInstall:
     - location: codedeploy/scripts/stop_unicorn.sh
+      runas: root 
     - location: codedeploy/scripts/configure_nginx.sh
     - location: codedeploy/scripts/install_dependencies.sh
   AfterInstall:
