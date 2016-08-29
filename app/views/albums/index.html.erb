@@ -14,7 +14,7 @@
       <div class="col-xs-12 col-sm-6 col-md-3">
         <strong><%= album.artist %></strong>
         <br/>
-        <%= album.track_list %>
+        <%= album.track_list.html_safe %>
       </div>
     </div>
     <div class="row">
